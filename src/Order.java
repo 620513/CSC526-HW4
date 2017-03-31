@@ -7,5 +7,7 @@ public class Order {
     private int id;
     private int tableid;
     private Date createdDate;
-    public void createOrder(){}
+    public void createOrder(){
+        System.out.println("Order Information");
+    }
 }

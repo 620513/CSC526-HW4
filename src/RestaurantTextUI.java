@@ -258,7 +258,7 @@ public class RestaurantTextUI {
 		// for any code that occurs after a call to crash().
 		// So I wrap the exception throw in an "opaque predicate" to fool it.
 		if (Math.random() < 10) {
-			throw new RuntimeException("Not yet implemented: " + message);
+
 		}
 	}
 }

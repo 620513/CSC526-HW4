@@ -18,10 +18,42 @@ public class Restaurant {
         Customer customer2=new Customer();
         customers.add(customer2);
     }
-    public void bookingTable(){}
-    public boolean isEmptyTable(){ return true;}
-    public void areAllTablesReserved(){}
-    public boolean releaseTable(){return true;}
-    public void bill(){}
-    public ArrayList getItemsList(){return null;}
+    public void bookingTable(){
+        System.out.println("Book Table "+party.name);
+    }
+    public boolean isEmptyTable(){
+        if(tableList!=null){
+            for(int i=0;i<tableList.size();i++){
+                Table table=(Table)tableList.get(i);
+                if(!table.isBooked()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public void areAllTablesReserved(){
+        if(tableList!=null){
+            for(int i=0;i<tableList.size();i++){
+                Table table1=(Table)tableList.get(i);
+                if(table1.isBooked()){
+                    System.out.println("this table is reserved");
+                }
+            }
+        }
+    }
+    public boolean releaseTable(){
+        if(tableList!=null){
+            for(int i=0;i<tableList.size();i++){
+                Table tablerelease=(Table)tableList.get(i);
+                if(!tablerelease.isBooked()){
+                    System.out.println("table is releasedd");
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public void bill(){System.out.println("Bill Information");}
+    public ArrayList getItemsList(){return itemList;}
 }

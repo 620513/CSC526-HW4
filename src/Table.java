@@ -6,12 +6,12 @@ public class Table {
     private int size;
     private boolean isEmptyorNot;
     public boolean bookTable(){
-        return true;
+        return isEmptyorNot;
     }
     public boolean isBooked(){
-        return true;
+        return isEmptyorNot;
     }
     public boolean vacateTable(){
-        return true;
+        return isEmptyorNot;
     }
 }

@@ -6,6 +6,10 @@ public class OrderItems {
     private int qty;
     private int itemId;
     private int orderId;
-    public void getOrderItems(){}
-    public void getAllOrderItemsFromOrder(){}
+    public void getOrderItems(){
+        System.out.println("Id : "+id+" qty : "+qty);
+    }
+    public void getAllOrderItemsFromOrder(int orderId){
+        System.out.println("All Order Items");
+    }
 }
